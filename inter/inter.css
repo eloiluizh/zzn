@@ -1,0 +1,9 @@
+/* inter */
+@font-face {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 400;
+	font-stretch: 100%;
+	src: local("Inter Regular"), local("Inter-Regular"), url(inter.woff2) format("woff2");
+}
+
