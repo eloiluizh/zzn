@@ -1,3 +1,78 @@
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    /* fix para o Chrome */
+}
+
+@media (max-width: 800px) {
+    body {
+        font-size: 4vw;
+        font-weight: 900;
+    }
+
+    .title {
+        margin-top: 50px;
+        font-size: 7vw;
+    }
+
+    .section {
+        font-size: 5vw;
+    }
+}
+
+@media (min-width: 990px) {
+    body {
+        font-size: 2vw;
+    }
+}
+
 body {
-backgroundColor: rgb(32,33,36);
+    background-color: #0a1218;
+    color: whitesmoke;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    justify-content: center;
+    text-align: center;
+}
+
+.section {
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-top: auto;
+    background-color: #071924;
+}
+
+section {
+    background: linear-gradient(to right,
+            #b85bff 20%,
+            #415dff 30%,
+            #875fff 40%,
+            #4ac0f2 70%,
+            #a963ff 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 10s ease-in-out infinite alternate;
+}
+a {
+    text-decoration: none;
 }
