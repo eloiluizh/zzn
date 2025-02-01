@@ -1,2 +1,2 @@
-# Home
-Personal projects
+# @oluizzn's project
+A personal website
