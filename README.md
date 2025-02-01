@@ -1,2 +1,2 @@
-# @oluizzn's project
-A personal website
+# zzn
+This is a personal website I created to share my simple programs and other projects.
