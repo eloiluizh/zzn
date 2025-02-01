@@ -14,31 +14,9 @@
     /* fix para o Chrome */
 }
 
-@media (max-width: 800px) {
-    body {
-        font-size: 4vw;
-        font-weight: 900;
-    }
-
-    .title {
-        margin-top: 50px;
-        font-size: 7vw;
-    }
-
-    .section {
-        font-size: 5vw;
-    }
-}
-
-@media (min-width: 990px) {
-    body {
-        font-size: 2vw;
-    }
-}
-
 body {
-    background-color: #0a1218;
-    color: whitesmoke;
+    background-color: #121212;
+    color: #ffffff;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -51,28 +29,31 @@ body {
     text-align: center;
 }
 
-.section {
-    font-weight: 900;
-    letter-spacing: 1px;
-    color: #ffffff;
-    margin-top: auto;
-    background-color: #071924;
-}
-
-section {
+.logo {
     background: linear-gradient(to right,
-            #b85bff 20%,
-            #415dff 30%,
-            #875fff 40%,
-            #4ac0f2 70%,
-            #a963ff 80%);
+            #121212 10%,
+            #ffffff 50%,
+            #ffffff 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
+    font-weight: 900;
     background-size: 500% auto;
-    animation: textShine 10s ease-in-out infinite alternate;
+    animation: textShine 5s ease-in-out infinite alternate;
+}
+footer {
+    margin-top: auto;
+}
+p {
+    font: italic 10px Arial;
+    color: #8a8a8a;
 }
 a {
     text-decoration: none;
+}
+i {
+    transition: transform 0.2s ease;
+}
+i:hover {
+    transform: scale(1.2);
 }
