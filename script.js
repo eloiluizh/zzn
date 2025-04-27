@@ -17,7 +17,7 @@ console.error();
 console.log("Já que ta fuçando no codigo, aproveita e me segue no insta @oluizzn")
 
 const div = document.createElement("div");
-div.textContent = "u\0190";
+div.textContent = "\u0190";
 document.getElementById("container").appendChild(div);
 
 // condição ? valorSeVerdadeiro : valorSeFalso
