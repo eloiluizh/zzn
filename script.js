@@ -18,6 +18,6 @@ console.log("Já que ta fuçando no codigo, aproveita e me segue no insta @oluiz
 
 const div = document.createElement("div");
 div.textContent = "u\0190";
-document.getElementById("container").appendChild("div");
+document.getElementById("container").appendChild(div);
 
 // condição ? valorSeVerdadeiro : valorSeFalso
