@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-adsense-account" content="ca-pub-3708543499222949">
-  <title>zzn</title>
+  <title>Home</title>
   <link href="style.css" rel="stylesheet" type="text/css">
   <link rel="preconnect" href="https://rsms.me/">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
@@ -14,12 +14,18 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1 class="title">Se tu entrou no site por conta propia parabens</h1>
-    <h2 id="container"></h2>
-  </div>
+  <header>
+    <div class="header-container" role="navigation">
+      <h2 onclick="openHome()" class="header-logo" >zzn</h2>
+      <div class="header-itens">
+        <h2 onclick="openProjects()">projects</h2>
+        <h2 onclick="openContact">contact me</h2>
+        <h2 onclick="openAbout()">about</h2>
+      </div>
+    </div>
+  </header>
   <footer>
-    <div class="logo">@oluizzn</div>
+    <div class="bottom-logo">@oluizzn</div>
     <p class="footer-text">"Eh os guri do inter" - Igordão</p>
     <a href="https://instagram.com/oluizzn" target="_blank">
       <i id="insta-icon" aria-label="Instagram" class="fa-brands fa-instagram" onmouseover="toggle('insta-icon', true)"

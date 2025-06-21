@@ -11,7 +11,6 @@
 :root {
     font-family: Inter, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1;
-    /* fix para o Chrome */
 }
 
 body {
@@ -24,12 +23,27 @@ body {
     margin: 0;
 }
 
-.container {
+.header-container {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    border-bottom: 1px solid #ffffff;
 }
-
-.logo {
+.header-itens {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.header-logo {
+    border-radius: 30px;
+    width: 80px;
+    height: 40px;
+    background-color: #282828;
+}
+.bottom-logo {
     background: linear-gradient(to right,
             #121212 10%,
             #ffffff 50%,
