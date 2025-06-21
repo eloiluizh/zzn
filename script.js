@@ -13,5 +13,8 @@ function toggle(IconId, IsHovered) {
         icon.classList.add(...classesToAdd)
     }
 }
+function openContact() {
+    window.location.href = "bio/bio.html"
+}
 console.error();
 console.log("Já que ta fuçando no codigo, aproveita e me segue no insta @oluizzn")
