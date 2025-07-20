@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="pt-br">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página pessoal e portfólio de @oluizzn.">
   <meta name="google-adsense-account" content="ca-pub-3708543499222949">
-  <title>Home</title>
+  <title>@oluizzn - Home</title>
   <link href="style.css" rel="stylesheet" type="text/css">
   <link rel="preconnect" href="https://rsms.me/">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
@@ -15,28 +15,40 @@
 
 <body>
   <header>
-    <div class="header-container" role="navigation">
-      <h2 onclick="openHome()" class="header-logo" >zzn</h2>
-      <div class="header-itens">
-        <h2 onclick="openProjects()">projects</h2>
-        <h2 onclick="openContact()">contact me</h2>
-        <h2 onclick="openAbout()">about</h2>
-      </div>
-    </div>
+    <nav class="header-container" role="navigation">
+      <a href="index.html" class="header-logo">zzn</a>
+      <ul class="header-itens">
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact">contact me</a></li>
+        <li><a href="#about">about</a></li>
+      </ul>
+    </nav>
   </header>
+
+  <main>
+    <section class="hero-section">
+      <h1>Olá, eu sou o Luiz.</h1>
+      <p class="hero-subtext">Desenvolvedor Web focado em criar experiências digitais incríveis.</p>
+      <a href="mailto:seu-email@exemplo.com" class="cta-button">Entre em Contato</a>
+    </section>
+  </main>
+
   <footer>
     <div class="bottom-logo">@oluizzn</div>
     <p class="footer-text">"Eh os guri do inter" - Igordão</p>
-    <a href="https://instagram.com/oluizzn" target="_blank">
-      <i id="insta-icon" aria-label="Instagram" class="fa-brands fa-instagram" onmouseover="toggle('insta-icon', true)"
-        onmouseout="toggle('insta-icon', false)" style="color: #ffffff;"></i>
-    </a>
-    <a href="https://github.com/eloiluizh" target="_blank">
-      <i id="github-icon" aria-label="Github" class="fa-brands fa-github" onmouseover="toggle('github-icon', true)"
-        onmouseout="toggle('github-icon', false)" style="color: #ffffff;"></i>
-    </a>
+    <div class="social-icons">
+      <a href="https://instagram.com/oluizzn" target="_blank" rel="noopener noreferrer">
+        <i id="insta-icon" aria-label="Instagram" class="fa-brands fa-instagram icon-default"></i>
+        <i aria-label="Instagram" class="fa-brands fa-square-instagram icon-hover"></i>
+      </a>
+      <a href="https://github.com/eloiluizh" target="_blank" rel="noopener noreferrer">
+        <i id="github-icon" aria-label="Github" class="fa-brands fa-github icon-default"></i>
+        <i aria-label="Github" class="fa-brands fa-square-github icon-hover"></i>
+      </a>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>
