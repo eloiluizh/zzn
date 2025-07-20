@@ -17,14 +17,13 @@
     <div class="header-container">
       <a href="index.html" class="header-logo">zzn</a>
 
-      <!-- Navegação para Desktop e Mobile -->
       <nav class="main-nav" id="mainNav">
-        <a href="#projects" class="nav-item" data-key="nav_projects">projetos</a>
-        <a href="#about" class="nav-item" data-key="nav_about">sobre</a>
-        <a href="#contact" class="nav-item" data-key="nav_contact">contato</a>
+        <a href="#projects" class="nav-item">projetos</a>
+        <a href="#about" class="nav-item">sobre</a>
+        <a href="#contact" class="nav-item">contato</a>
+        <a href="https://github.com/eloiluizh/zzn" target="_blank" rel="noopener noreferrer" class="nav-item">código fonte</a>
       </nav>
 
-      <!-- Botão Hamburger para Mobile -->
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
         <span class="hamburger"></span>
       </button>
@@ -36,51 +35,42 @@
       <h1 class="hero-title">
         Olá, sou o Luiz
       </h1>
-      <p class="hero-subtext" data-key="hero_subtitle">Tenho 16 anos e estou construindo o futuro através do código, design e inovação digital.</p>
-      <a href="mailto:eloiluizh@icloud.com" class="cta-button" data-key="hero_cta">Vamos Conversar</a>
+      <p class="hero-subtext">Tenho 16 anos e estou construindo o futuro através do código, design e inovação digital.</p>
+      <a href="mailto:eloiluizh@icloud.com" class="cta-button">Vamos Conversar</a>
     </section>
 
-    <!-- As seções de projetos, sobre e contato continuam as mesmas -->
     <section id="projects" class="content-section">
-      <h2 data-key="projects_title">Meus Projetos</h2>
+      <h2>Meus Projetos</h2>
       <div class="projects-grid">
         <div class="project-card">
           <h3>zzn - site pessoal</h3>
           <p>Site pessoal desenvolvido com HTML, CSS e JS utilizando ferramentas de IA.</p>
           <div class="card-src">
-              <a href="https://github.com/eloiluizh/zzn"><i class="fa-brands fa-github fa-xl"></i></a>
-          </div>
+              <a href="https://github.com/eloiluizh/zzn" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github fa-xl"></i>
+              </a>
           </div>
         </div>
       </div>
     </section>
 
     <section id="about" class="content-section">
-      <h2 data-key="about_title">Sobre Mim</h2>
+      <h2>Sobre Mim</h2>
       <div class="about-content">
         <div class="about-text">
           <p>Prazer, sou o Luiz, de Santa Maria - RS. Sou apaixonado por como as coisas funcionam, desde o código que roda por trás de um site até o design que torna a experiência do usuário memorável.</p>
           <p>Atualmente, estou focado em aprender e construir uma base sólida para uma futura carreira em desenvolvimento. Este espaço é um registro da minha jornada.</p>
         </div>
-        <!--
-        <div class="skills-grid">
-          <div class="skill-item">Frontend</div>
-          <div class="skill-item">UI/UX Design</div>
-          <div class="skill-item">JavaScript</div>
-          <div class="skill-item">React</div>
-          <div class="skill-item">CSS Animations</div>
-          <div class="skill-item">Responsive Design</div>
-        </div> -->
       </div>
     </section>
 
     <section id="contact" class="content-section">
-       <h2 data-key="contact_title">Contato</h2>
+       <h2>Contato</h2>
        <div class="contact-content">
          <p>Interessado em colaborar ou apenas bater um papo sobre tecnologia? Ficarei feliz em conversar!</p>
          <div class="contact-methods">
-           <a href="mailto:eloiluizh@icloud.com" class="contact-method"><i class="fas fa-envelope"></i></a>
-           <a href="https://github.com/eloiluizh" class="contact-method"><i class="fab fa-github"></i></a>
+           <a href="mailto:eloiluizh@icloud.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+           <a href="https://github.com/eloiluizh" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
          </div>
        </div>
     </section>
@@ -88,7 +78,7 @@
 
   <footer>
     <div class="bottom-logo">@oluizzn</div>
-    <p class="footer-text" data-key="footer_quote">"Eh os guri do inter" - Igordão</p>
+    <p class="footer-text">"Eh os guri do inter" - Igordão</p>
     <div class="social-icons">
       <a href="https://github.com/eloiluizh" target="_blank" rel="noopener noreferrer"><i aria-label="Github" class="fa-brands fa-github"></i></a>
     </div>
@@ -96,4 +86,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
