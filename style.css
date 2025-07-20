@@ -203,6 +203,7 @@ main {
 
 /* [NOVO] Estilo para o link do código fonte no card */
 .card-src {
+    margin: 2px;
     margin-top: 1.5rem;
     text-align: right;
 }
