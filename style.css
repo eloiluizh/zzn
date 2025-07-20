@@ -1,54 +1,88 @@
 @keyframes textShine {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    100% {
-        background-position: 100% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
 
 :root {
+    /* Paleta de Cores */
+    --background: #121212;
+    --text-primary: #f0f0f0;
+    --text-secondary: #a0a0a0;
+    --text-dark: #121212;
+    --border: #282828;
+    --accent: #007cf0; /* Azul Elétrico */
+
     font-family: Inter, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1;
 }
 
-body {
-    background-color: #121212;
-    color: #ffffff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Impede que o cabeçalho fixo cubra os títulos das seções */
 }
 
-/* --- Header --- */
+body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    text-align: center;
+    margin: 0;
+    padding-top: 80px; /* Espaço para o cabeçalho fixo */
+}
+
+/* --- Header Fixo com Efeito Blur --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(18, 18, 18, 0.75); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px); /* O efeito de vidro fosco! */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
 .header-container {
     display: flex;
-    justify-content: space-between; /* Melhora o alinhamento */
+    justify-content: space-between;
     align-items: center;
-    padding: 15px 5%; /* Adiciona espaçamento nas laterais */
-    border-bottom: 1px solid #333; /* Cor mais suave */
+    padding: 15px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .header-logo {
     font-weight: 900;
-    font-size: 1.5rem;
-    color: #ffffff;
+    font-size: 1.8rem;
+    color: var(--text-primary);
     text-decoration: none;
+}
+/* Animação do logo ativada via JS */
+.header-logo.shine-active {
+    background: linear-gradient(to right, #007cf0 20%, #f0f0f0 50%, #007cf0 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% auto;
+    animation: textShine 2s ease-in-out forwards;
+}
+
+.header-right-items {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .header-itens {
     display: flex;
-    list-style: none; /* Remove bolinhas da lista */
+    list-style: none;
     margin: 0;
     padding: 0;
-    gap: 30px; /* Aumenta o espaçamento */
+    gap: 30px;
 }
 
 .header-itens a {
-    color: #a0a0a0;
+    color: var(--text-secondary);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
@@ -56,63 +90,89 @@ body {
 }
 
 .header-itens a:hover {
-    color: #ffffff;
+    color: var(--accent);
+}
+
+.lang-selector {
+    display: flex;
+    gap: 5px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    cursor: pointer;
+}
+.lang-selector span:not(.active) {
+    opacity: 0.5;
+}
+.lang-selector span:hover {
+    color: var(--text-primary);
+}
+.lang-selector span.active {
+    color: var(--accent);
+    transform: scale(1.1);
 }
 
 /* --- Main Content --- */
 main {
-    flex-grow: 1; /* Faz o conteúdo principal ocupar o espaço disponível */
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-section {
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
 }
-
-.hero-section {
-    max-width: 600px;
-}
-
 .hero-section h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Tamanho de fonte responsivo */
     font-weight: 800;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
-
 .hero-subtext {
-    font-size: 1.2rem;
-    color: #b3b3b3;
-    margin-bottom: 30px;
-    font-style: normal; /* Reseta o estilo 'p' global */
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    max-width: 600px;
+    line-height: 1.6;
+    font-style: normal;
 }
 
 .cta-button {
-    background-color: #ffffff;
-    color: #121212;
-    padding: 12px 24px;
+    background-color: var(--accent);
+    color: var(--text-primary);
+    padding: 14px 28px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 700;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
-
 .cta-button:hover {
-    background-color: #e0e0e0;
-    transform: scale(1.05);
+    background-color: #0056b3;
+    transform: translateY(-3px);
 }
 
+.content-section {
+    margin-bottom: 80px;
+    text-align: left;
+    line-height: 1.7;
+}
+.content-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
 
 /* --- Footer --- */
 footer {
-    padding: 30px;
-    margin-top: auto; /* Garante que o footer fique no fim */
+    padding: 40px 20px;
+    border-top: 1px solid var(--border);
 }
 
 .bottom-logo {
-    background: linear-gradient(to right,
-            #121212 20%, /* Ajustado para começar mais sutil */
-            #ffffff 50%,
-            #121212 80%); /* Ajustado para terminar mais sutil */
+    background: linear-gradient(to right, var(--background) 20%, var(--text-primary) 50%, var(--background) 80%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -120,50 +180,49 @@ footer {
     font-size: 1.5rem;
     background-size: 400% auto;
     animation: textShine 5s ease-in-out infinite alternate;
+    cursor: pointer;
 }
 
 .footer-text {
-    font-style: italic; /* Mantém o itálico */
-    font-size: 0.9rem; /* Tamanho um pouco maior */
-    color: #8a8a8a;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
     margin: 15px 0;
-    font-family: inherit; /* Usa a mesma fonte do site */
+    font-family: inherit;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
     gap: 25px;
+    margin-top: 20px;
 }
-
 .social-icons a {
     font-size: 1.5rem;
-    color: #ffffff;
+    color: var(--text-secondary);
     position: relative;
     display: inline-block;
-    width: 24px; /* Garante que a área do link não mude de tamanho */
+    width: 24px;
     height: 24px;
 }
-
+.social-icons a:hover {
+    color: var(--accent);
+}
 .social-icons i {
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease;
     position: absolute;
     left: 0;
     top: 0;
 }
-
-/* Efeito de troca de ícone com CSS */
 .icon-hover {
     opacity: 0;
     transform: scale(0.8);
 }
-
 .social-icons a:hover .icon-default {
     opacity: 0;
     transform: scale(0.8);
 }
-
 .social-icons a:hover .icon-hover {
     opacity: 1;
-    transform: scale(1.2); /* Efeito de crescimento original */
+    transform: scale(1.2);
 }

@@ -5,7 +5,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Página pessoal e portfólio de @oluizzn.">
-  <meta name="google-adsense-account" content="ca-pub-3708543499222949">
   <title>@oluizzn - Home</title>
   <link href="style.css" rel="stylesheet" type="text/css">
   <link rel="preconnect" href="https://rsms.me/">
@@ -16,33 +15,55 @@
 <body>
   <header>
     <nav class="header-container" role="navigation">
-      <a href="index.html" class="header-logo">zzn</a>
-      <ul class="header-itens">
-        <li><a href="#projects">projects</a></li>
-        <li><a href="#contact">contact me</a></li>
-        <li><a href="#about">about</a></li>
-      </ul>
+      <a href="index.html" id="header-logo" class="header-logo">zzn</a>
+      <div class="header-right-items">
+        <ul class="header-itens">
+          <li><a href="#projects" data-key="nav_projects">projects</a></li>
+          <li><a href="#about" data-key="nav_about">about</a></li>
+          <li><a href="#contact" data-key="nav_contact">contact me</a></li>
+        </ul>
+        <div class="lang-selector">
+          <span onclick="setLanguage('pt')" class="lang-pt active">PT</span>
+          <span>|</span>
+          <span onclick="setLanguage('en')" class="lang-en">EN</span>
+        </div>
+      </div>
     </nav>
   </header>
 
   <main>
     <section class="hero-section">
-      <h1>Olá, eu sou o Luiz.</h1>
-      <p class="hero-subtext">Desenvolvedor Web focado em criar experiências digitais incríveis.</p>
-      <a href="mailto:seu-email@exemplo.com" class="cta-button">Entre em Contato</a>
+      <h1 data-key="hero_title">Explorando o universo da tecnologia e design.</h1>
+      <p class="hero-subtext" data-key="hero_subtitle">Tenho 16 anos e estou apenas começando a arar a terra onde, no futuro, irei plantar minhas ideias.</p>
+      <a href="mailto:seu-email@exemplo.com" class="cta-button" data-key="hero_cta">Vamos Conversar</a>
+    </section>
+
+    <section id="projects" class="content-section">
+      <h2 data-key="projects_title">Meus Projetos</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
+    </section>
+
+    <section id="about" class="content-section">
+      <h2 data-key="about_title">Sobre Mim</h2>
+      <p>Prazer, sou o Luiz, de Santa Maria - RS. Sou apaixonado por como as coisas funcionam, desde o código que roda por trás de um site até o design que torna a experiência do usuário memorável. Atualmente, estou focado em aprender e construir uma base sólida para uma futura carreira em desenvolvimento. Este espaço é um registro da minha jornada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales, est eu digsim t, non fermentum diam nisl sit amet erat.</p>
+    </section>
+
+    <section id="contact" class="content-section">
+       <h2 data-key="contact_title">Contato</h2>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
     </section>
   </main>
 
   <footer>
-    <div class="bottom-logo">@oluizzn</div>
-    <p class="footer-text">"Eh os guri do inter" - Igordão</p>
+    <div id="footer-logo" class="bottom-logo">@oluizzn</div>
+    <p class="footer-text" data-key="footer_quote">"Eh os guri do inter" - Igordão</p>
     <div class="social-icons">
       <a href="https://instagram.com/oluizzn" target="_blank" rel="noopener noreferrer">
-        <i id="insta-icon" aria-label="Instagram" class="fa-brands fa-instagram icon-default"></i>
+        <i aria-label="Instagram" class="fa-brands fa-instagram icon-default"></i>
         <i aria-label="Instagram" class="fa-brands fa-square-instagram icon-hover"></i>
       </a>
       <a href="https://github.com/eloiluizh" target="_blank" rel="noopener noreferrer">
-        <i id="github-icon" aria-label="Github" class="fa-brands fa-github icon-default"></i>
+        <i aria-label="Github" class="fa-brands fa-github icon-default"></i>
         <i aria-label="Github" class="fa-brands fa-square-github icon-hover"></i>
       </a>
     </div>
