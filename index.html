@@ -14,62 +14,106 @@
 
 <body>
   <header>
-    <nav class="header-container" role="navigation">
-      <a href="index.html" id="header-logo" class="header-logo">zzn</a>
-      <div class="header-right-items">
-        <ul class="header-itens">
-          <li><a href="#projects" data-key="nav_projects">projects</a></li>
-          <li><a href="#about" data-key="nav_about">about</a></li>
-          <li><a href="#contact" data-key="nav_contact">contact me</a></li>
-        </ul>
+    <div class="header-container">
+      <a href="index.html" class="header-logo">zzn</a>
+
+      <!-- Navegação para Desktop e Mobile -->
+      <nav class="main-nav" id="mainNav">
+        <a href="#projects" class="nav-item" data-key="nav_projects">projetos</a>
+        <a href="#about" class="nav-item" data-key="nav_about">sobre</a>
+        <a href="#contact" class="nav-item" data-key="nav_contact">contato</a>
         <div class="lang-selector">
           <span onclick="setLanguage('pt')" class="lang-pt active">PT</span>
           <span>|</span>
           <span onclick="setLanguage('en')" class="lang-en">EN</span>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      <!-- Botão Hamburger para Mobile -->
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+        <span class="hamburger"></span>
+      </button>
+    </div>
   </header>
 
   <main>
     <section class="hero-section">
-      <h1 data-key="hero_title">Explorando o universo da tecnologia e design.</h1>
-      <p class="hero-subtext" data-key="hero_subtitle">Tenho 16 anos e estou apenas começando a arar a terra onde, no futuro, irei plantar minhas ideias.</p>
+      <!-- A animação de texto agora está aqui para maior impacto -->
+      <h1 class="hero-title">
+        <span id="animated-hero-text" data-key="animated_text_1">creative developer</span>
+      </h1>
+      <p class="hero-subtext" data-key="hero_subtitle">Tenho 16 anos e estou construindo o futuro através do código, design e inovação digital.</p>
       <a href="mailto:seu-email@exemplo.com" class="cta-button" data-key="hero_cta">Vamos Conversar</a>
     </section>
 
+    <!-- As seções de projetos, sobre e contato continuam as mesmas -->
     <section id="projects" class="content-section">
       <h2 data-key="projects_title">Meus Projetos</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Projeto Web Inovador</h3>
+          <p>Interface moderna com animações fluidas e experiência de usuário única.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>Design System</h3>
+          <p>Sistema de design completo para aplicações web modernas.</p>
+          <div class="project-tech">
+            <span>Figma</span><span>React</span><span>TypeScript</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>App Mobile</h3>
+          <p>Aplicativo mobile com foco em performance e usabilidade.</p>
+          <div class="project-tech">
+            <span>React Native</span><span>Node.js</span><span>MongoDB</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="about" class="content-section">
       <h2 data-key="about_title">Sobre Mim</h2>
-      <p>Prazer, sou o Luiz, de Santa Maria - RS. Sou apaixonado por como as coisas funcionam, desde o código que roda por trás de um site até o design que torna a experiência do usuário memorável. Atualmente, estou focado em aprender e construir uma base sólida para uma futura carreira em desenvolvimento. Este espaço é um registro da minha jornada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales, est eu digsim t, non fermentum diam nisl sit amet erat.</p>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Prazer, sou o Luiz, de Santa Maria - RS. Sou apaixonado por como as coisas funcionam, desde o código que roda por trás de um site até o design que torna a experiência do usuário memorável.</p>
+          <p>Atualmente, estou focado em aprender e construir uma base sólida para uma futura carreira em desenvolvimento. Este espaço é um registro da minha jornada.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-item">Frontend</div>
+          <div class="skill-item">UI/UX Design</div>
+          <div class="skill-item">JavaScript</div>
+          <div class="skill-item">React</div>
+          <div class="skill-item">CSS Animations</div>
+          <div class="skill-item">Responsive Design</div>
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="content-section">
        <h2 data-key="contact_title">Contato</h2>
-       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+       <div class="contact-content">
+         <p>Interessado em colaborar ou apenas bater um papo sobre tecnologia? Ficarei feliz em conversar!</p>
+         <div class="contact-methods">
+           <a href="mailto:seu-email@exemplo.com" class="contact-method"><i class="fas fa-envelope"></i><span>Email</span></a>
+           <a href="https://instagram.com/oluizzn" class="contact-method"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+           <a href="https://github.com/eloiluizh" class="contact-method"><i class="fab fa-github"></i><span>GitHub</span></a>
+         </div>
+       </div>
     </section>
   </main>
 
   <footer>
-    <div id="footer-logo" class="bottom-logo">@oluizzn</div>
+    <div class="bottom-logo">@oluizzn</div>
     <p class="footer-text" data-key="footer_quote">"Eh os guri do inter" - Igordão</p>
     <div class="social-icons">
-      <a href="https://instagram.com/oluizzn" target="_blank" rel="noopener noreferrer">
-        <i aria-label="Instagram" class="fa-brands fa-instagram icon-default"></i>
-        <i aria-label="Instagram" class="fa-brands fa-square-instagram icon-hover"></i>
-      </a>
-      <a href="https://github.com/eloiluizh" target="_blank" rel="noopener noreferrer">
-        <i aria-label="Github" class="fa-brands fa-github icon-default"></i>
-        <i aria-label="Github" class="fa-brands fa-square-github icon-hover"></i>
-      </a>
+      <a href="https://instagram.com/oluizzn" target="_blank" rel="noopener noreferrer"><i aria-label="Instagram" class="fa-brands fa-instagram"></i></a>
+      <a href="https://github.com/eloiluizh" target="_blank" rel="noopener noreferrer"><i aria-label="Github" class="fa-brands fa-github"></i></a>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>
